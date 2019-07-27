@@ -13,7 +13,7 @@
 
 <body class="bg-dark text-light">
     <div class="container">
-        <header>
+        <header class="mb-5">
             <nav class="navbar navbar-expand-md navbar-dark bg-dark d-flex justify-content-between">
                 <h5 class="navbar-brand font-weight-normal" data-bind="text: heading"></h5>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault"
@@ -43,7 +43,7 @@
         </header>
         <main role="main">
             <div class="" id="page_home">
-                <div class="row mt-5 mb-5 flex-row justify-content-center">
+                <div class="row mb-5 flex-row justify-content-center">
                     <img src="img\stanger-things_raw.png">
                 </div>
                 <div class="row">
@@ -89,12 +89,16 @@
             </div>
             <!--End homepage-->
             <div id="page_episodes" class="collapse mb-5">
-                <blockquote class="row blockquote text-center">
-                    <p class="mb-0" data-bind="text:snippets()[0]"></p>
-                    <footer class="blockquote-footer" data-bind="text: quote.author"></footer>
-                </blockquote>
+                <div class="row mb-5">
+                    <div class="col-12">
+                        <blockquote class="blockquote text-center">
+                            <p class="mb-0" data-bind="text:snippets()[0]"></p>
+                            <footer class="blockquote-footer" data-bind="text: quote.author"></footer>
+                        </blockquote>
+                    </div>
+                </div>
                 <h2 class="text-center">Episode List</h2>
-                <div class="row">
+                <div class="row mb-5">
                     <div class="col-12 text-dark" data-bind="foreach: episodelist">
                         <div class="card">
                             <div class="card-body">
@@ -107,10 +111,25 @@
                         </div>
                     </div>
                 </div>
-                <blockquote class="row blockquote text-center mb-5">
-                    <p class="mb-0" data-bind="text:snippets()[2]"></p>
-                    <footer class="blockquote-footer" data-bind="text:quote.author"></footer>
-                </blockquote>
+                <div class="row">
+                    <div class="col-12">
+                        <blockquote class="blockquote text-center mb-5">
+                            <p class="mb-0" data-bind="text:snippets()[2]"></p>
+                            <footer class="blockquote-footer" data-bind="text: quote.author"></footer>
+                        </blockquote>
+                    </div>
+                </div>
+            </div>
+            <div id="page_error" class="mb-5 collapse">
+                <div class="row mb-5">
+                    <div class="col-12 text-center">
+                        <h2>Our Page is lost in the Upside Down.</h2>
+                        <h5>Please call Hopper.</5>
+                    </div>
+                </div>
+                <div class="row mb-5 flex-row justify-content-center">
+                    <img src="img\stanger-things_raw.png">
+                </div>
             </div>
             <!--End episodes page-->
         </main>
