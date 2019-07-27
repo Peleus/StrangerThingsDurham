@@ -12,7 +12,7 @@
 </head>
 
 <body class="bg-dark text-light">
-    <div id="main" class="container">
+    <div class="container">
         <header>
             <nav class="navbar navbar-expand-md navbar-dark bg-dark d-flex justify-content-between">
                 <h5 class="navbar-brand font-weight-normal" data-bind="text: heading"></h5>
@@ -59,13 +59,13 @@
                 <div class="row mt-5 mb-5">
                     <p data-bind="text:description"></p>
                 </div>
-                <div class="row mt-5 mb-5">
+                <div class="row mb-5">
                     <blockquote class="blockquote text-center">
                         <p class="mb-0" data-bind="text:quote.text"></p>
                         <footer class="blockquote-footer" data-bind="text:quote.author"></footer>
                     </blockquote>
                 </div>
-                <div class="row text-dark galleryitem" data-bind="foreach: gallery">
+                <div class="row text-dark galleryitem mb-5" data-bind="foreach: gallery">
                     <div class="col-md-4 col-sm-6 bg-light galleryitem">
                         <div class="thumbnail"><img data-bind="attr: { src: src }" class="card-img-top" alt="">
                             <div class="caption">
@@ -74,39 +74,40 @@
                         </div>
                     </div>
                 </div>
-                <blockquote class="blockquote text-center">
+                <blockquote class="blockquote text-center mb-5">
                     <p class="mb-0" data-bind="text:snippets()[1]"></p>
                     <footer class="blockquote-footer" data-bind="text:quote.author"></footer>
                 </blockquote>
-                <div class="row">
+                <div class="row mb-5">
                     <div class="col-12">
                         <h2 class="text-center">Locations</h2>
-                        <ul class="list-group list-group-flush text-dark"
-                            data-bind="foreach: locations">
+                        <ul class="list-group list-group-flush text-dark" data-bind="foreach: locations">
                             <li class="list-group-item" data-bind="text: $data"></li>
                         </ul>
                     </div>
                 </div>
             </div>
             <!--End homepage-->
-            <div id="page_episodes" class="collapse">
-                <blockquote class="blockquote text-center">
+            <div id="page_episodes" class="collapse mb-5">
+                <blockquote class="row blockquote text-center">
                     <p class="mb-0" data-bind="text:snippets()[0]"></p>
                     <footer class="blockquote-footer" data-bind="text: quote.author"></footer>
                 </blockquote>
                 <h2 class="text-center">Episode List</h2>
-                <div class="text-dark" data-bind="foreach: episodelist">
-                    <div class="card">
-                        <div class="card-body">
-                            <ul class="list-group list-group-flush">
-                                <li class="list-group-item">Season: <span data-bind="text: season"></span></li>
-                                <li class="list-group-item">Name: <span data-bind="text: name"></span></li>
-                                <li class="list-group-item">Rating: <span data-bind="text: rating"></li>
-                            </ul>
+                <div class="row">
+                    <div class="col-12 text-dark" data-bind="foreach: episodelist">
+                        <div class="card">
+                            <div class="card-body">
+                                <ul class="list-group list-group-flush">
+                                    <li class="list-group-item">Season: <span data-bind="text: season"></span></li>
+                                    <li class="list-group-item">Name: <span data-bind="text: name"></span></li>
+                                    <li class="list-group-item">Rating: <span data-bind="text: rating"></li>
+                                </ul>
+                            </div>
                         </div>
                     </div>
                 </div>
-                <blockquote class="blockquote text-center">
+                <blockquote class="row blockquote text-center mb-5">
                     <p class="mb-0" data-bind="text:snippets()[2]"></p>
                     <footer class="blockquote-footer" data-bind="text:quote.author"></footer>
                 </blockquote>
