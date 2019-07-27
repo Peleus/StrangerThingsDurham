@@ -64,16 +64,21 @@ var App = (function(){
         xobj.overrideMimeType("application/json");
         xobj.open('GET', jsonFile, true);
         xobj.onreadystatechange = function () {
-            if (xobj.readyState == 4 && xobj.status == "200") {
-    
-                var jsonString = xobj.responseText;
+            if (xobj.readyState == 4 ) {
+                if(xobj.status == "200") {
+                    var jsonString = xobj.responseText;
     
                 jsonString = cleanData(jsonString);
     
                 var parsed  = JSON.parse(jsonString);
     
                 callback(parsed);
-    
+                }else {
+                    document.getElementById("page_episodes").classList.add("collapse");
+                    document.getElementById("page_home").classList.add("collapse");
+                    document.getElementById("page_error").classList.remove("collapse");
+                }
+                
             }
         };
         //Need to handle possible file errors
