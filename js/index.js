@@ -81,7 +81,6 @@ var App = (function(){
                 
             }
         };
-        //Need to handle possible file errors
         xobj.send(null);
     }
     

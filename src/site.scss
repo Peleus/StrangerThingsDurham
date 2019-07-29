@@ -15,4 +15,26 @@
     flex-grow: 0;
 }
 
+.blockquote-footer {
+    color: #e9ecef;
+}
+
+.text-StrangerThings {
+    color: #eb272e;
+}
+
+a {
+    color: #f8f9fa;
+    text-decoration: underline;
+    &:hover{
+        color: #adb5bd;
+    }
+}
+
+.bg-dark {
+    background-color: #2C3235 !important;
+}
+
+
+
 
