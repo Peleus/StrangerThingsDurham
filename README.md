@@ -1,2 +1,2 @@
-# StrangerThingsDurham
-A Stranger Things in Durham website
+# StrangerThingsRTP
+A Stranger Things in RTP website
