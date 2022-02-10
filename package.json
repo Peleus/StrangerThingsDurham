@@ -11,7 +11,7 @@
   "devDependencies": {
     "bootstrap": "^4.3.1",
     "bootstrap.native": "^2.0.26",
-    "node-sass": "^4.12.0"
+    "node-sass": "^7.0.0"
   },
   "dependencies": {}
 }
